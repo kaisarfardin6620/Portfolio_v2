@@ -21,6 +21,11 @@ export const navLinks = [
 
 export const socialLinks = [
   {
+    label: 'Resume',
+    url: config.resume,
+    icon: 'copy',
+  },
+  {
     label: 'LinkedIn',
     url: config.linkedin,
     icon: 'link',
