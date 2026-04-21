@@ -1,8 +1,7 @@
-import { json, createCookieSessionStorage } from '@remix-run/cloudflare';
+import { json, createCookieSessionStorage } from '@remix-run/node';
 
-export async function action({ request, context }) {
-  const env =
-    context?.cloudflare?.env ?? (typeof process !== 'undefined' ? process.env : {});
+export async function action({ request }) {
+  const env = typeof process !== 'undefined' ? process.env : {};
   const formData = await request.formData();
   const theme = formData.get('theme');
 

@@ -14,7 +14,7 @@ import { useRef, useState } from 'react';
 import { cssProps, msToNum, numToMs } from '~/utils/style';
 import { baseMeta } from '~/utils/meta';
 import { useLoaderData } from '@remix-run/react';
-import { json } from '@remix-run/cloudflare';
+import { json } from '@remix-run/node';
 
 import config from '~/config.json';
 import styles from './contact.module.css';
@@ -32,9 +32,8 @@ const MAX_MESSAGE_LENGTH = 4096;
 const EMAIL_PATTERN = /(.+)@(.+){2,}\.(.+){2,}/;
 
 // Expose the environment variables securely to the client browser frontend
-export async function loader({ context }) {
-  const env =
-    context?.cloudflare?.env ?? (typeof process !== 'undefined' ? process.env : {});
+export async function loader() {
+  const env = typeof process !== 'undefined' ? process.env : {};
 
   return json({
     SERVICE_ID: env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || 'service_5pwjjxn',
