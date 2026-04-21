@@ -1,1 +1,1 @@
-export { Contact as default, meta, action, loader } from './contact';
+export { Contact as default, meta, loader } from './contact';

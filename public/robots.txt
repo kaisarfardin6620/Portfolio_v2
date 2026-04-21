@@ -1,1 +1,3 @@
 User-agent: *
+Sitemap: https://portofolio-rho-five-62.vercel.app/sitemap.xml
+# Repository: https://github.com/kaisarfardin6620/Portfolio_v2
