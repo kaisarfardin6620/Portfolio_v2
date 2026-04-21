@@ -48,6 +48,8 @@ export const links = () => [
 ];
 
 export const loader = async ({ request, context }) => {
+  const env =
+    context?.cloudflare?.env ?? (typeof process !== 'undefined' ? process.env : {});
   const { url } = request;
   const { pathname } = new URL(url);
   const pathnameSliced = pathname.endsWith('/') ? pathname.slice(0, -1) : url;
@@ -60,7 +62,7 @@ export const loader = async ({ request, context }) => {
       maxAge: 604_800,
       path: '/',
       sameSite: 'lax',
-      secrets: [context.cloudflare.env.SESSION_SECRET || ' '],
+      secrets: [env.SESSION_SECRET || ' '],
       secure: true,
     },
   });

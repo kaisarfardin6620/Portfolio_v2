@@ -33,10 +33,13 @@ const EMAIL_PATTERN = /(.+)@(.+){2,}\.(.+){2,}/;
 
 // Expose the environment variables securely to the client browser frontend
 export async function loader({ context }) {
+  const env =
+    context?.cloudflare?.env ?? (typeof process !== 'undefined' ? process.env : {});
+
   return json({
-    SERVICE_ID: context.cloudflare.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || 'service_5pwjjxn',
-    TEMPLATE_ID: context.cloudflare.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || 'template_5yaquxb',
-    PUBLIC_KEY: context.cloudflare.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || 'oiilj71JxmvsMj1OR',
+    SERVICE_ID: env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || 'service_5pwjjxn',
+    TEMPLATE_ID: env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || 'template_5yaquxb',
+    PUBLIC_KEY: env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || 'oiilj71JxmvsMj1OR',
   });
 }
 
