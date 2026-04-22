@@ -1,0 +1,10 @@
+.textSection {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: var(--space-m);
+}
+
+.columns {
+  align-items: center;
+}

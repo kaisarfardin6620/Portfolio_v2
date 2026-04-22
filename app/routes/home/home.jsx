@@ -1,12 +1,12 @@
-import gamestackTexture2Large from '~/assets/gamestack-list-large.jpg';
-import gamestackTexture2Placeholder from '~/assets/gamestack-list-placeholder.jpg';
-import gamestackTexture2 from '~/assets/gamestack-list.jpg';
-import gamestackTextureLarge from '~/assets/gamestack-login-large.jpg';
-import gamestackTexturePlaceholder from '~/assets/gamestack-login-placeholder.jpg';
-import gamestackTexture from '~/assets/gamestack-login.jpg';
-import sliceTextureLarge from '~/assets/slice-app-large.jpg';
-import sliceTexturePlaceholder from '~/assets/slice-app-placeholder.jpg';
-import sliceTexture from '~/assets/slice-app.jpg';
+import wingmanTexture2Large from '~/assets/wingman-home-preview-2-large.jpg';
+import wingmanTexture2Placeholder from '~/assets/wingman-home-preview-2-placeholder.jpg';
+import wingmanTexture2 from '~/assets/wingman-home-preview-2.jpg';
+import wingmanTextureLarge from '~/assets/wingman-home-preview-1-large.jpg';
+import wingmanTexturePlaceholder from '~/assets/wingman-home-preview-1-placeholder.jpg';
+import wingmanTexture from '~/assets/wingman-home-preview-1.jpg';
+import magictaleTextureLarge from '~/assets/magictale-home-large.png';
+import magictaleTexturePlaceholder from '~/assets/magictale-home-placeholder.png';
+import magictaleTexture from '~/assets/magictale-home.png';
 import sprTextureLarge from '~/assets/spr-lesson-builder-dark-large.jpg';
 import sprTexturePlaceholder from '~/assets/spr-lesson-builder-dark-placeholder.jpg';
 import sprTexture from '~/assets/spr-lesson-builder-dark.jpg';
@@ -45,7 +45,7 @@ export const links = () => {
 export const meta = () => {
   return baseMeta({
     title: 'AI Developer + Backend Engineer',
-    description: `Portfolio of ${config.name} — building production-grade LLM systems, multimodal AI pipelines, and scalable backend platforms.`,
+    description: `Portfolio of ${config.name} â€” building production-grade LLM systems, multimodal AI pipelines, and scalable backend platforms.`,
   });
 };
 
@@ -141,7 +141,7 @@ export const Home = () => {
         title="Explainable Hybrid KG-RAG Assistant"
         description="A production-ready RAG architecture combining vector search, knowledge graphs, and NLI-based claim verification"
         buttonText="View project"
-        buttonLink="/projects/smart-sparrow"
+        buttonLink="/projects/xai"
         model={{
           type: 'laptop',
           alt: 'AI assistant interface and architecture overview',
@@ -162,18 +162,18 @@ export const Home = () => {
         title="Wingman: Multimodal AI Coaching System"
         description="Real-time coaching assistant with text, image, and audio workflows powered by OpenAI Vision and Whisper"
         buttonText="View project"
-        buttonLink="/projects/slice"
+        buttonLink="/projects/wingman"
         model={{
           type: 'phone',
           alt: 'Multimodal coaching assistant interface',
           textures: [
             {
-              srcSet: `${gamestackTexture} 375w, ${gamestackTextureLarge} 750w`,
-              placeholder: gamestackTexturePlaceholder,
+              srcSet: `${wingmanTexture} 375w, ${wingmanTextureLarge} 750w`,
+              placeholder: wingmanTexturePlaceholder,
             },
             {
-              srcSet: `${gamestackTexture2} 375w, ${gamestackTexture2Large} 750w`,
-              placeholder: gamestackTexture2Placeholder,
+              srcSet: `${wingmanTexture2} 375w, ${wingmanTexture2Large} 750w`,
+              placeholder: wingmanTexture2Placeholder,
             },
           ],
         }}
@@ -186,14 +186,14 @@ export const Home = () => {
         title="MagicTale AI Backend"
         description="An asynchronous storytelling pipeline combining GPT-4o, image generation, voice synthesis, and live progress updates"
         buttonText="View project"
-        buttonLink="/projects/volkihar-knight"
+        buttonLink="/projects/magictale"
         model={{
           type: 'laptop',
-          alt: 'AI storytelling workflow dashboard',
+          alt: 'MagicTale AI storytelling dashboard',
           textures: [
             {
-              srcSet: `${sliceTexture} 800w, ${sliceTextureLarge} 1920w`,
-              placeholder: sliceTexturePlaceholder,
+              srcSet: `${magictaleTexture} 800w, ${magictaleTextureLarge} 1920w`,
+              placeholder: magictaleTexturePlaceholder,
             },
           ],
         }}
@@ -202,3 +202,4 @@ export const Home = () => {
     </div>
   );
 };
+

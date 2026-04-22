@@ -1,0 +1,121 @@
+.wingman {
+  --primary: #00e5ff;
+  --accent: #ffd700;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+  align-items: center;
+}
+
+@media (max-width: 1024px) {
+  .columns {
+    grid-template-columns: 100%;
+    gap: var(--space-l);
+  }
+}
+
+.imagesText {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-m);
+}
+
+.pipelineImage {
+  display: flex;
+  justify-content: center;
+}
+
+.heroMobiles {
+  align-items: center;
+}
+
+.heroMobileImage {
+  width: 100%;
+  max-width: 640px;
+  height: auto;
+}
+
+.personaGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-l);
+  margin-top: var(--space-xl);
+}
+
+.personaCard {
+  background: var(--background-light);
+  padding: var(--space-l);
+  border-radius: var(--border-radius-m);
+  border: 1px solid var(--border-color);
+  transition: transform var(--duration-m) var(--bezier);
+}
+
+.personaCard:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary);
+}
+
+.personaCard h3 {
+  color: var(--primary);
+  margin-bottom: var(--space-s);
+  font-size: 1.25rem;
+}
+
+.personaCard p {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  opacity: 0.8;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 100%;
+  }
+}
+
+.gridImage {
+  display: flex;
+  justify-content: center;
+}
+
+.sidebarImages {
+  display: flex;
+  justify-content: center;
+}
+
+.sidebarImage {
+  max-width: 100%;
+  height: auto;
+}
+
+.profileSummary {
+  background: var(--background-light);
+  padding: var(--space-xl);
+  border-radius: var(--border-radius-l);
+  border-left: 4px solid var(--accent);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-m);
+  margin-top: var(--space-l);
+}
+
+.profileDetail {
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+
+.profileDetail strong {
+  color: var(--accent);
+  margin-right: var(--space-s);
+}
+
